@@ -6,19 +6,95 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Comrpobación de que he visto todos los videotutoriales.</h1>
-    <ol>
-    <li><a href="01_Introducción a HTML/Introducción a HTML.html">Introducción a HTML.</a></li>
-    <li><a href="02_Intro a VSCode/Intro a VSCode.html">Intro a VSCode.</a></li>
-    <li><a href="03_Elementos de bloque y de linea/Elementos de bloque y de linea.html">Elementos de bloque y de linea html.</a></li>
-    <li><a href="04_Parrafos/Parrafos.html">Párrafos.</a></li>
-    <li><a href="05_Estilos/Estilos.html">Estilos.</a></li>
-    <li><a href="06_Enlaces/index.html">Enlaces.</a></li>
-    <li><a href="07_Enlaces marcadores/index.html">Enlaces marcadores.</a></li>
-    <li><a href="08_Listas/index.html">Listas</a></li>
-    <li><a href="09_Tablas/index.html">Tablas.</a></li>
-    <li><a href="10_Formularios/index.html">Formularios.</a></li>
-    <li><a href="11_Formularios 2 (Tipos de Inputs)/index.html">Formularios II y III.</a></li>
-    </ol>
+    <h1>Tipos de inputs.</h1>
+    <form action="procesa.php">
+    <fieldset>
+        <legend>Datos Personales</legend>
+    <p>
+        <label for="nom">Nombre:</label>
+        <input type="text" maxlength="8" 
+        name="nombre" required autofocus
+        placeholder="Escriba su nombre completo:"
+        id="nom">
+    </p>
+    <p>
+        <label for="pob">Población:</label>
+        <input type="text" value="Villamayor de Santiago" maxlength="50" 
+        name="pob"
+        id="pob">
+    </p>
+    <p>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" 
+        minlength="6"
+        maxlength="10" 
+        name="contraseña" required
+        id="contraseña">
+    </p>
+    <p>
+        <label for="hombre">Hombre:</label>
+        <input type="radio" value="H"
+        checked id="hombre" name="genero">
+        <label for="mujer">Mujer:</label>
+        <input type="radio" value="M"
+        id="mujer" name="genero">
+    </p>
+    <p>
+        <label for="fumador">Fumador:</label>
+        <input type="checkbox" name="fuma"
+        id="fumador">
+    </p>
+    </fieldset>
+    <p>
+        <label for="prov">Provincia:</label>
+        <select name="prov" id="prov">
+            <option value="alb">Albacete</option>
+            <option value="cr">Ciudad Real</option>
+            <option value="cu" selected>Cuenca</option>
+            <option value="gua">Guadalajara</option>
+            <option value="to">Toledo</option>
+        </select>
+    </p>
+    <p>
+        <label for="obs">Observaciones:</label>
+        <textarea name="obs" 
+        cols="10"
+        rows="5"
+        id="obs">
+            Escriba algo...
+        </textarea>
+    </p>
+    <p>
+        <label for="color">Color:</label>
+        <input type="color" name="color"
+        id="color">
+    </p>
+    <p>
+        <label for="fecha-nac">Fecha de nacimiento:</label>
+        <input type="date" name="fecha-nac"
+        id="fecha-nac">
+    </p>
+    <p>
+        <label for="edad">Edad:</label>
+        <input type="number" name="edad"
+        id="edad" min="0" max="100">
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="email" name="email"
+        id="email">
+    </p>
+    <p>
+        <label for="foto">Adjuntar foto:</label>
+        <input type="file" name="foto"
+        id="foto">
+    </p>
+    <!-- Botones de envio y reseteo.-->
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset"
+        value="reiniciar formulario">
+    </p>
+    </form>
 </body>
 </html>
